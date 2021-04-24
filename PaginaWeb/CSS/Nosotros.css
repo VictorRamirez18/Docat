@@ -1,0 +1,150 @@
+*{
+	margin:0px;
+	box-sizing: border-box;
+}
+#titulo{
+	font-size: 9vh;
+	text-align: center;
+	font-family: Garamond;
+	font-weight: bold;
+}
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container-two{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#filosofia{
+	font-family: Garamond;
+	padding: 30px;
+	text-align: center;
+}
+#filosofia .container{
+	width: 100%;
+}
+#filosofia .container:last-child{
+	margin:30px auto;
+}
+#filosofia .container img{
+	width: 40%;
+}
+#filosofia .container-two p:first-child{
+	font-size: 6vh;
+}
+#filosofia .container-two p:last-child{
+	font-size: 4vh;
+	width: 70%;
+}
+.info{
+	font-size: 4.5vh;
+	font-family: Garamond;
+	text-align: center;
+	width: 91%;
+	margin: auto;
+}
+h2{
+	font-size: 5vh;
+	text-align: center;
+	font-family: Garamond;
+	font-weight: bold;
+	margin:50px auto;
+}
+.hystory{
+	background: #98FB98;
+	margin:10px;
+	padding: 30px;
+	border-radius: 30px;
+	font-size: 4.5vh;
+	font-family: Garamond;
+}
+#imgGatoll{
+	background: url("../Imagenes/IMGGatoII.png");
+	background-position:center;
+	background-size: cover;
+	width: 50%;
+	height: 300px;
+	margin:30px auto;
+	border:2px solid pink;
+}
+/*--------------*/
+.team {
+  position: relative;
+  /*display: flex;*/
+  /*height: 100px;*/
+  width: 100%;
+  margin: 33px auto 20px auto;
+}
+
+.frase {
+  position: absolute;
+  color: white;
+  font-family: Garamond;
+  top: 10%;
+  left: 33%;
+  width: 38%;
+  text-align: center;
+  font-size: 7vh;
+  font-weight: bold;
+  background: rgba(128, 128, 128, 0.77);
+}
+
+.team img { 
+  width: 100%;
+  height: auto;
+  opacity: 1;
+}
+/*---*/
+.equipo{
+	flex-wrap: wrap;
+	font-size: 5vh;
+	font-family: Garamond;
+	/*height: 900px;*/
+	height: auto;
+	margin: 26px auto 35px auto;
+}
+.equipo img{
+	width: 100%;
+}
+.equipo .container-two{
+	width: 30%;
+}
+.equipo .container-two:not(:first-child){
+	margin-left: 10px;
+}
+@media (max-width: 600px){
+	#filosofia{
+		padding: 0px;
+	}
+	#filosofia .container{
+		flex-direction: column;
+		width: 100%;
+	}
+	#filosofia img{
+		width: 100%;
+	}
+	#filosofia .container-two p:last-child{
+		width: 100%;
+	}
+	.hystory{
+		font-size: 3vh;
+	}
+	#imgGatoll{
+		width: 100%;
+	}
+	.frase{
+		width: 100%;
+		left: 0;
+	}
+
+	.equipo{
+		flex-direction: column;
+	}
+	.equipo .container-two{
+		width: 90%;
+	}
+}

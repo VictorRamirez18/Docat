@@ -1,0 +1,165 @@
+*{
+	margin: 0;
+	box-sizing: border-box;
+}
+textarea{
+	resize: none;
+	width: 50%;
+	height: 150px;
+}
+article{
+	width: 70%;
+	margin:48px auto 30px auto;
+	display: flex;
+	flex-direction: column;
+	font-size: 3.5vh;
+	font-family: Garamond;
+}
+article p:not(.subtitulo){
+	margin-bottom: 10px;
+}
+.formblock{
+	padding: 0px 10px 30px 40px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 17px;
+	border-bottom: 2px solid black;
+	align-items: flex-start;
+}
+.formblock > .subtitulo{
+	align-items: center;
+}
+.formblock > input{
+	width: 50%;
+}
+.subtitulo{
+	font-size: 4.3vh;
+	margin: 0px auto 38px auto;
+}
+/*-----*/
+#botones{
+	display: flex;
+	width: 60%;
+	margin: auto;
+	height: auto;
+	justify-content: space-between;
+}
+#botones button{
+	font-size: 3.5vh;
+	padding: 5px 23px;
+	border-radius: 10px;
+}
+#botones button:first-child{
+	background: #FF6347;
+}
+#botones button:last-child{
+	background: #66CDAA;
+}
+#botones button:first-child:hover{
+	background: #DC143C;
+	color: white;
+}
+#botones button:last-child:hover{
+	background: #4682B4;
+	color: white;
+}
+/*-----*/
+.modal{
+	position: fixed;
+	top: 500px;
+	left: 0;
+	z-index: 9999999;
+	background: rgba(0, 0, 0, 0.75);
+	/*width: 100vw;
+	height: 100vh;*/
+	opacity: 0;
+	transition: opacity 0.35s ease;
+	}
+	.modal .content-modal{
+	width: 100%;
+	max-width: 500px;
+	position: fixed;
+	left: 50%;
+	top: 500px;
+	color: white;
+	transition: top 0.35s ease;
+	margin-left: -250px;
+	background: #00CED1;
+	box-shadow: 0 1px 2px rgba(0,0,0,0, 0.1);
+	border-radius: 2px;
+	z-index: 9999999;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 500px;
+	border-radius: 80px;
+	/*font-family: Garamond;*/
+	}
+	.modal h2{
+	padding: 5px;
+	text-align: center;
+	margin: 0;
+	}
+	.content-modal button{
+	background: #4682B4;
+	color: white;
+	padding: 7px 15px;
+	font-size: 3vh;
+	border-radius: 10px;
+	}
+	.modal:target{
+	opacity: 1;
+	top: 0;
+	}
+	.modal .btn-close-modal{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999999991;
+	}
+	.modal:target .content-modal{
+	top:50px;
+	transition: top 0.35s ease;
+	}
+	.content-modal img{
+	margin: 10px;
+	width: 38%;
+	}
+	/*---------*/
+#gatoGafas{
+	width: 50%;
+	margin:30px auto;
+	display: flex;
+}
+#gatoGafas img{
+	width: 100%;
+}
+@media (max-width: 600px){
+	article .formblock input{
+		width: 100%;
+	}
+	.formblock{
+		padding: 0px 0px 30px 0px;
+	}
+	textarea{
+		width: 100%;
+	}
+	#botones{
+		width: 98%;
+	}
+	#botones button{
+		font-size: 1.5vh;
+	}
+
+	@media (max-width: 796px){
+		.modal .content-modal{
+			width: 90%;
+			max-width: none;
+			left: 5%;
+			margin-left: 0;
+		}
+    }
+}

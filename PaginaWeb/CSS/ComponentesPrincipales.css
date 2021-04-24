@@ -1,0 +1,203 @@
+/*header*/
+header{
+	background-color: #98FB98;
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#divLogo{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	flex:30%;
+}
+header #trimgsHeader{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+	flex: 70%;
+}
+header #dogatSocial{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex: 27%;
+}
+#redes{
+	position: absolute;
+	top: 10%;
+	left:64%;
+	width: 17%;
+}
+#redes a{
+	text-decoration: none;
+}
+/*navegacion*/
+.navegacion{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: 30px auto;
+}
+.navegacion ul{
+	list-style: none;
+	padding: 0px;
+}
+.navegacion > ul{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.menu > li{
+	background:#66CDAA;
+	width: 20%;
+	margin-left: 10px;
+	text-align: center;
+	position: relative;
+	display: inline-block;
+	font-family: garamond;
+	font-size:1.7vw;
+	border-radius: 15px;
+}
+.menu li:first-child{
+	margin-left:0px;
+}
+.menu > li > a{
+	display: block;
+	padding: 10px 20px;
+	color: #353535;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+.menu #liServices{
+	background: #7FFFD4;
+	border-radius: 15px;
+}
+.menu #liServices:hover{
+	border-radius: 0px;
+}
+.menu li a:hover{
+	color: black;
+	background: #7FFFD4;
+	transition: background .3s;
+}
+
+/* Submenu*/
+.submenu{
+	position: absolute;
+	background: #98FB98;
+	width: 100%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+	z-index: 1;
+}
+
+.submenu li a{
+	display: block;
+	padding: 7px 10px;
+	color: #000000;
+	font-family: 'Open sans';
+	text-decoration: none;
+	border-width: 1px 1px 0px 1px;
+	border-color: black;
+	border-style: solid;
+}
+.submenu li:last-child a{
+	border-bottom: 1px solid black;
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+}
+
+/*footer*/
+footer{
+	background: #6B8E23;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 30px;
+	align-items: flex-start;
+	color:white;
+	font-family: Rubik;
+	font-size: 3vh;
+	z-index: 30;
+}
+footer i{
+	color:black;
+}
+.leyenda{
+	font-size: 4vh;
+	margin-bottom: 16px;
+	margin-top: 16px;
+}
+footer form{
+	display: flex;
+}
+footer div p:last-child{
+	margin-top: 15px;
+}
+footer form input{
+	font-size: 3vh;
+	padding: 7px 10px;
+}
+footer form input:last-child{
+	margin-left: 0px;
+	background: #00BFFF;
+	color:white;
+}
+footer form input[type=button]:hover{
+	background: #1C827D;
+}
+footer #copy{
+	font-size: 3vh;
+	margin:15px auto 0px auto;
+}
+
+@media (max-width: 600px) {
+	/*header*/
+	header #redes{
+   	display: none;
+   }
+   /*navbar*/
+   .navegacion{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin: 30px auto;
+	}
+	.navegacion > ul{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.menu > li{
+		background:#66CDAA;
+		width:100%;
+		margin-left: 0px;
+		text-align: center;
+		position: relative;
+		display: inline-block;
+		font-family: garamond;
+		font-size:2vh;
+		border-radius: 0px;
+	}
+	.menu #liServices{
+		background: #7FFFD4;
+		border-radius: 0px;
+ 	}
+ 	/*footer*/
+ 	footer form input{
+		font-size: 1.8vh;
+	}
+}
